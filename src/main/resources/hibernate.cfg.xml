@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:7000/ejemplo5</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">postgres</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property> <!--Hace un comparativo con las clases y lo convierte en SQL-->
+        <property name="show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property> <!--Es recomendable en lugar de update seria CREATE-->
+         
+        <!-- add annotated resources here -->
+        <mapping class="org.uv.programa06_da.Venta"/>
+        <mapping class="org.uv.programa06_da.DetalleVenta"/>
+
+    </session-factory>
+</hibernate-configuration>
+
+
